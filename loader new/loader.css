@@ -2,12 +2,11 @@ body{
     margin:0;
     background-color: white;
   }
-  
+
   .loading {
     position: absolute;
-    left: 95vh;
+    left: 45vw;
     top: 35vh;
-/*     margin: -60px 0 0 -60px; */
     background:url("acm.png");
     background-size: cover;
     width: 200px;
@@ -23,15 +22,64 @@ body{
     top: 0%;
     left: 1%;
     opacity: 0.7;
-    box-shadow:#006494 -4px -6px 8px -4px;
+    box-shadow: #006494 -4px -6px 8px -4px;
     animation: rotate 1s infinite linear;
   }
-  
+ 
   @keyframes rotate {
     0% {
       transform: rotateZ(0deg);
     }
     100% {
       transform: rotateZ(360deg);
+    }
+  }
+
+ 
+  @media screen and (max-width:1024px)
+  {
+    .loading {
+      left: 41vw;
+    }
+    .loading:after {
+      left: 0%;
+    }
+  }
+  @media screen and (max-width:768px)
+  {
+    .loading {
+      left: 38vw;
+      top: 38vh;
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  @media screen and (max-width:425px)
+  {
+    .loading {
+      left: 34vw;
+      top: 42vh;
+      width: 140px;
+      height: 140px;
+    }
+  }
+  @media screen and (max-width:375px)
+  {
+    .loading {
+      left: 30vw;
+      top: 40vh;
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  @media screen and (max-width:320px)
+  {
+    .loading {
+      left: 30vw;
+      top: 38vh;
+      width: 120px;
+      height: 120px;
     }
   }
